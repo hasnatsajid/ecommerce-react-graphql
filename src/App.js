@@ -1,4 +1,4 @@
-import 'categories.styles.scss';
+import Categories from './components/Categories/Categories';
 
 function App() {
   const categories = [
@@ -20,7 +20,7 @@ function App() {
     {
       id: 4,
       title: 'womens',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
     },
     {
       id: 5,
@@ -29,19 +29,7 @@ function App() {
     },
   ];
 
-  return (
-    <div className="categories-container">
-      {categories.map(({ title, id }) => (
-        <div className="category-container" key={id}>
-          <div className="background-image" />
-          <div className="category-body-container">
-            <h2>{title}</h2>
-            <p>Shop Now</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+  return <Categories categories={categories} />;
 }
 
 export default App;
