@@ -1,19 +1,10 @@
-import { Routes, Route, Outlet } from 'react-router-dom';
-import Home from './routes/home';
+import { Routes, Route } from 'react-router-dom';
+import Navigation from './routes/navigation/Navigation';
+import Home from './routes/home/home';
+import SignIn from './routes/sign-in/signIn';
 
 const Shop = () => {
   return <h1>Shop page here</h1>;
-};
-
-const Navigation = () => {
-  return (
-    <div>
-      <div>
-        <h1>I am navigaton</h1>
-        <Outlet />
-      </div>
-    </div>
-  );
 };
 
 function App() {
@@ -22,6 +13,7 @@ function App() {
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path="shop" element={<Shop />} />
+        <Route path="sign-in" element={<SignIn />} />
       </Route>
     </Routes>
   );
